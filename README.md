@@ -51,7 +51,7 @@ This service sends the document directly to a VLM, which understands structure t
 POST /analyze-document
 {
   "url": "https://example.com/Records/BReceipt/Receipt-843.pdf",
-  "prompt": "Check whether this document meets ALL of these conditions: (1) it is a bunker delivery note [look for words like bunker analysis, bunker fuel, and use your own reasoning - not only these exact words]; (2) viscosity is present and around 210 [+-10 is okay]; and (3) a date is present [+- 10 hrs is allowed]. Return true only if every condition is clearly visible in the document."
+  "prompt": "Check whether this document meets ALL of these conditions: (1) the required viscosity value is present and is around 210 [±10 is okay]; and (2) a date is present [±10 hours is allowed]. Use your own reasoning to identify the relevant values rather than relying only on exact wording. Return true only if every condition is clearly visible in the document."
 }
 ```
 
